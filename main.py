@@ -1,8 +1,24 @@
-import csv
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt 
+import seaborn as sns
 
-# Open CSV file and read into a dictionary
-with open('laptop_prices.csv', mode='r', encoding='utf-8') as file:
-    reader = csv.DictReader(file)
-    data = [row for row in reader]  # List of dictionaries
+import warnings
+warnings.filterwarnings('ignore')
 
-print(data)  # Each row is a dictionary with column names as keys
+df = pd.read_csv('data.csv')
+df
+
+df.info()
+print(f"The Laptop Price Dataset has {df.shape[0]} rows and {df.shape[1]} columns")
+print(df.isnull().sum())
+
+print(df.isnull().sum())
+
+print(df.duplicated().sum())
+
+print(df.columns.to_list())
+
+print(df['brand'].value_counts())
+
+
