@@ -19,6 +19,6 @@ print(df.duplicated().sum())
 
 print(df.columns.to_list())
 
-print(df['brand'].value_counts())
+print(df['Ram'].value_counts())
 
 
